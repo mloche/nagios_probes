@@ -52,12 +52,12 @@ comments_number=int(_query(connector,query)[0])
 #control print(type(comments_number),comments_number)
 
 
-if comments_number < 4:
+if comments_number <= 4:
 	status_code=0
 	sys.stdout.write("OK :: Comments volume is normal, less than 1 per hour\n")
 	#print("status code is :",status_code)
 	sys.exit(status_code)
-elif comments_number > 4 and comments_number < 10:
+elif comments_number > 4 and comments_number <= 10:
 	status_code=1
 	sys.stdout.write("WARNING :: comments volume is rapidly increasing, more than 1 per hour\n")
 	#print("status code is :",status_code)	
