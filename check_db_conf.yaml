@@ -1,0 +1,8 @@
+database:
+ database:
+  db_host: localhost
+  db_name: wordpress
+  db_admin: wordpress
+  db_password: wordpress
+  db_port: 3306
+ query:  "select count(*) from wp_comments where comment_date > date_sub(now(),interval 4 hour);"
